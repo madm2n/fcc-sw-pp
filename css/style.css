@@ -70,12 +70,17 @@ body {
 }
 
 .section {
+  padding: 10rem 1.5rem 0 1.5rem;
+}
+
+.header, .footer {
   padding: 0 1.5rem;
 }
 
 .section-title {
   font-size: 4rem;
   margin: 3rem 0;
+  text-align: center;
 }
 
 .banner {
@@ -142,5 +147,17 @@ body {
 }
 
 .saga-card-img > * {
+  width: 100%;
+}
+
+.trailer-video {
+  width: 100%;
+  max-width: 1130px;
+  height: 630px;
+  margin: 0 auto;
+}
+
+.trailer-video > * {
+  height: 100%;
   width: 100%;
 }
