@@ -1,6 +1,6 @@
 const CAROUSEL_CLASS = 'saga-carousel';
 
-function init() {
+function carousel() {
   const $carousels = Array
     .prototype
     .slice
@@ -31,4 +31,4 @@ function init() {
   events.forEach((name) => window.addEventListener(name, justify));
 }
 
-init();
+carousel();
