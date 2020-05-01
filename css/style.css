@@ -13,7 +13,7 @@ html {
   font-size: 10px;
 }
 
-p, body, html, ul {
+p, body, html, ul, h1, h2, h3 {
   margin: 0;
   padding: 0;
 }
@@ -22,8 +22,9 @@ body {
   font-size: 1.6rem;
   font-family: inherit;
   padding-top: 8rem;
+  color: var(--secondary-color, white);
+  background-color: var(--main-color, black);
 }
-
 
 .nav {
   list-style: none;
@@ -56,6 +57,7 @@ body {
   height: 8rem;
   align-items: center;
   position: fixed;
+  z-index: 1;
   left: 0;
   right: 0;
   top: 0;
@@ -72,19 +74,73 @@ body {
 }
 
 .section-title {
-  font-size: 3.5rem;
+  font-size: 4rem;
+  margin: 3rem 0;
 }
 
 .banner {
-  padding: 0;
+  position: relative;
   height: calc(100vh - 8rem);
+  padding: 0;
   overflow: hidden;
   background-color: #FEF3D5;
 }
 
 .banner-img {
+  position: absolute;
   height: 100%;
   width: auto;
   margin: 0 auto;
   display: block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.saga-title {
+  text-align: center;
+}
+
+.saga-carousel {
+  height: 340px;
+  overflow: hidden;
+  margin: 0 -1.5rem;
+}
+
+.saga-cards {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  height: 360px;
+  padding: 5px 10px;
+}
+
+.saga-card {
+  background-color: #151414;
+  padding: 1rem;
+  flex: 0 0 160px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+  border-radius: 2px;
+  bottom: 0;
+  box-shadow: 0 2px 2px 0 rgba(255,255,255,.16), 0 0 0 1px rgba(255,255,255,.08)
+}
+
+.saga-card-title {
+  margin: 1rem 0;
+  min-height: 6rem;
+}
+
+.saga-card:last-child {
+  margin-right: 1.5rem;
+}
+
+.saga-card-img {
+  display: flex;
+  justify-content: center;
+}
+
+.saga-card-img > * {
+  width: 100%;
 }
