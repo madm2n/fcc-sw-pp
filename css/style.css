@@ -161,3 +161,10 @@ body {
   height: 100%;
   width: 100%;
 }
+
+.footer {
+  padding: 10rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
