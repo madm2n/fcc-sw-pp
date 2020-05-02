@@ -19,7 +19,7 @@ function carousel() {
   });
 
   function justify() {
-    carousels.forEach(({$list}) => {
+    carousels.forEach(({ $list }) => {
       if ($list.scrollWidth > $list.clientWidth) {
         $list.style.justifyContent = 'flex-start';
       } else {
