@@ -248,16 +248,16 @@ body {
 }
 
 @media screen and (min-width: 610px) {
+  body {
+    padding-top: 8rem;
+  }
+
   .header {
     height: 8rem;
   }
   
   .banner {
     height: calc(100vh - 8rem);
-  }
-
-  body {
-    padding-top: 8rem;
   }
 
   .trailer-video {
