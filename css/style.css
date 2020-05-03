@@ -199,6 +199,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .newsletter-title {
@@ -217,7 +218,7 @@ body {
 }
 
 .newsletter-input {
-  width: 220px;
+  width: 200px;
   height: 25px;
   padding: 0 1.5rem;
   border-right: none;
@@ -234,9 +235,8 @@ body {
 }
 
 .newsletter-submit {
-  width: 100px;
+  width: 80px;
   height: 25px;
-  padding: 0 1.5rem;
   box-shadow: none;
   cursor: pointer;
 }
