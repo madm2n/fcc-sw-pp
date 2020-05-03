@@ -53,11 +53,9 @@ function carousel() {
   window.addEventListener('load', () => {
     carousels.forEach((carousel) => {
       const listener = () => buttons(carousel);
-      
-      listener();
-      
       carousel.$list.addEventListener('scroll', listener);
       window.addEventListener('resize', listener);
+      listener();
     });
   });
 }
