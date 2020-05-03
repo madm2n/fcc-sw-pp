@@ -176,14 +176,18 @@
       </div>
     </section>
   </main>
-  <footer class="footer section">
-    <div id="newsletter" class="newsletter">
-      <h2 class="section-tile newsletter-title">Subscribe to ours newsletter</h2>
-      <form action="https://www.freecodecamp.com/email-submit" id="form" method="POST">
-        <input type="email" placeholder="Enter your email" name="email" id="email" required>
-        <input type="submit" value="Subscribe" id="submit">
-      </form>
-    </div>
+  <section id="newsletter" class="newsletter section">
+    <h2 class="newsletter-title">Subscribe to ours newsletter</h2>
+    <form action="https://www.freecodecamp.com/email-submit" id="form" class="newsletter-form" method="POST">
+      <div class="newsletter-skew">
+        <input type="email" name="email" id="email" class="form-input newsletter-input" placeholder="Enter your email" required>
+      </div>
+      <div class="newsletter-skew">
+        <input type="submit" id="submit" class="form-submit newsletter-submit" value="Subscribe">
+      </div>
+    </form>
+  </section>
+  <footer class="footer">
     <p>&copy; 2020 All right reserved. May the force be with you.</p>
   </footer>
   <script src="js/carousel.js"></script>

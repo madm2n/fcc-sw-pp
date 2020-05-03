@@ -195,9 +195,54 @@ body {
   width: 100%;
 }
 
-.footer {
-  padding: 10rem 1.5rem 1.5rem 1.5rem;
+.newsletter {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter-title {
+  margin-right: 2.5rem;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-input, .newsletter-submit {
+  background-color: var(--main-color, black);
+  color: var(--secondary-color, white);
+  border: 1px solid white;
+}
+
+.newsletter-input {
+  width: 220px;
+  height: 25px;
+  padding: 0 1.5rem;
+  border-right: none;
+  transition: border 0.3s ease-in;
+}
+
+.newsletter-input:focus {
+  outline: #1e90ff;
+  border-color: #1e90ff;
+}
+
+.newsletter-skew {
+  transform: skew(-12deg);
+}
+
+.newsletter-submit {
+  width: 100px;
+  height: 25px;
+  padding: 0 1.5rem;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.footer {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
 }
