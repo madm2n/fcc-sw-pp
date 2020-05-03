@@ -11,6 +11,7 @@
 html {
   font-family: var(--font-family, cursive);
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 p, body, html, ul, h1, h2, h3 {
@@ -149,6 +150,7 @@ body {
   overflow-x: auto;
   height: 360px;
   padding: 5px 10px;
+  scroll-behavior: smooth;
 }
 
 .saga-card {

@@ -48,12 +48,24 @@ function carousel() {
     }
   }
 
+  function right({ $list }) {
+    $list.scrollLeft += $list.scrollWidth/4;
+  }
+
+  function left({ $list }) {
+    $list.scrollLeft -= $list.scrollWidth/4;
+  }
+
   events.forEach((name) => window.addEventListener(name, justify));
 
   window.addEventListener('load', () => {
     carousels.forEach((carousel) => {
+      const { $list, $right, $left } = carousel;
       const listener = () => buttons(carousel);
-      carousel.$list.addEventListener('scroll', listener);
+
+      $right.addEventListener('click', () => right(carousel));
+      $left.addEventListener('click', () => left(carousel));
+      $list.addEventListener('scroll', listener);
       window.addEventListener('resize', listener);
       listener();
     });
