@@ -247,13 +247,6 @@ body {
   justify-content: center;
 }
 
-@media screen and (min-width: 1200px) {
-  .trailer-video {
-    max-width: 1130px;
-    height: 630px;
-  }
-}
-
 @media screen and (min-width: 610px) {
   .trailer-video {
     max-width: 565px;
@@ -266,5 +259,12 @@ body {
 
   .section {
     padding: 10rem 1.5rem 0 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .trailer-video {
+    max-width: 1130px;
+    height: 630px;
   }
 }
