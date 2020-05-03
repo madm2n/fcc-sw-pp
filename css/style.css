@@ -71,7 +71,7 @@ body {
 }
 
 .section {
-  padding: 10rem 1.5rem 0 1.5rem;
+  padding: 5rem 1.5rem 0 1.5rem;
 }
 
 .header, .footer {
@@ -185,9 +185,9 @@ body {
 
 .trailer-video {
   width: 100%;
-  max-width: 1130px;
-  height: 630px;
   margin: 0 auto;
+  max-width: 395px;
+  height: 220px;
 }
 
 .trailer-video > * {
@@ -203,7 +203,7 @@ body {
 }
 
 .newsletter-title {
-  margin-right: 2.5rem;
+  margin: 0 0 1.5rem 0;
 }
 
 .newsletter-form {
@@ -245,4 +245,26 @@ body {
   padding: 1.5rem;
   display: flex;
   justify-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .trailer-video {
+    max-width: 1130px;
+    height: 630px;
+  }
+}
+
+@media screen and (min-width: 610px) {
+  .trailer-video {
+    max-width: 565px;
+    height: 315px;
+  }
+
+  .newsletter-title {
+    margin: 0 2.5rem 0 0;
+  }
+
+  .section {
+    padding: 10rem 1.5rem 0 1.5rem;
+  }
 }
