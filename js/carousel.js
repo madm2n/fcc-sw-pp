@@ -1,4 +1,8 @@
 const CAROUSEL_CLASS = 'saga-carousel';
+const CARDS_CLASS = 'saga-cards';
+const LEFT_BUTTON_CLASS = 'saga-carousel-left';
+const RIGHT_BUTTON_CLASS = 'saga-carousel-right';
+const ACTIVE_CLASS = 'active';
 
 function carousel() {
   const $carousels = Array
@@ -14,7 +18,9 @@ function carousel() {
   const carousels = $carousels.map(($wrap) => {
     return {
       $wrap,
-      $list: $wrap.querySelector('*')
+      $list: $wrap.querySelector(`.${CARDS_CLASS}`),
+      $left: $wrap.querySelector(`.${LEFT_BUTTON_CLASS}`),
+      $right: $wrap.querySelector(`.${RIGHT_BUTTON_CLASS}`)
     };
   });
 
@@ -28,7 +34,32 @@ function carousel() {
     });
   }
 
+  function buttons({ $list, $left, $right }) {
+    if ($list.scrollLeft !== 0) {
+      $left.classList.add(ACTIVE_CLASS);
+    } else {
+      $left.classList.remove(ACTIVE_CLASS);
+    }
+
+    if ($list.scrollWidth > $list.clientWidth && $list.clientWidth + $list.scrollLeft !== $list.scrollWidth) {
+      $right.classList.add(ACTIVE_CLASS);
+    } else {
+      $right.classList.remove(ACTIVE_CLASS);
+    }
+  }
+
   events.forEach((name) => window.addEventListener(name, justify));
+
+  window.addEventListener('load', () => {
+    carousels.forEach((carousel) => {
+      const listener = () => buttons(carousel);
+      
+      listener();
+      
+      carousel.$list.addEventListener('scroll', listener);
+      window.addEventListener('resize', listener);
+    });
+  });
 }
 
 carousel();
