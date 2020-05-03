@@ -22,7 +22,7 @@ p, body, html, ul, h1, h2, h3 {
 body {
   font-size: 1.6rem;
   font-family: inherit;
-  padding-top: 8rem;
+  padding-top: 6rem;
   color: var(--secondary-color, white);
   background-color: var(--main-color, black);
 }
@@ -55,7 +55,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 8rem;
+  height: 6rem;
   align-items: center;
   position: fixed;
   z-index: 1;
@@ -79,14 +79,14 @@ body {
 }
 
 .section-title {
-  font-size: 4rem;
-  margin: 3rem 0;
+  font-size: 2.8rem;
+  margin: 1rem 0;
   text-align: center;
 }
 
 .banner {
   position: relative;
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 6rem);
   padding: 0;
   overflow: hidden;
   background-color: #FEF3D5;
@@ -248,6 +248,18 @@ body {
 }
 
 @media screen and (min-width: 610px) {
+  .header {
+    height: 8rem;
+  }
+  
+  .banner {
+    height: calc(100vh - 8rem);
+  }
+
+  body {
+    padding-top: 8rem;
+  }
+
   .trailer-video {
     max-width: 565px;
     height: 315px;
@@ -259,6 +271,12 @@ body {
 
   .section {
     padding: 10rem 1.5rem 0 1.5rem;
+  }
+
+  .section-title {
+    font-size: 4rem;
+    margin: 3rem 0;
+    text-align: center;
   }
 }
 
