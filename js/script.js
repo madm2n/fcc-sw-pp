@@ -4,17 +4,12 @@ const LEFT_BUTTON_CLASS = 'saga-carousel-left';
 const RIGHT_BUTTON_CLASS = 'saga-carousel-right';
 const ACTIVE_CLASS = 'active';
 
-function carousel() {
-  const $carousels = Array
-    .prototype
-    .slice
-    .call(document.getElementsByClassName(CAROUSEL_CLASS));
+const $carousels = Array
+  .prototype
+  .slice
+  .call(document.getElementsByClassName(CAROUSEL_CLASS));
 
-  if (!$carousels) {
-    return null;
-  }
-
-  const events = ['load', 'resize'];
+if ($carousels.length > 0) {
   const carousels = $carousels.map(($wrap) => {
     return {
       $wrap,
@@ -56,7 +51,7 @@ function carousel() {
     $list.scrollLeft -= $list.scrollWidth/4;
   }
 
-  events.forEach((name) => window.addEventListener(name, justify));
+  ['load', 'resize'].forEach((name) => window.addEventListener(name, justify));
 
   window.addEventListener('load', () => {
     carousels.forEach((carousel) => {
@@ -71,5 +66,3 @@ function carousel() {
     });
   });
 }
-
-carousel();
